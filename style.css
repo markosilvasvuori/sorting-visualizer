@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 50%;
+    height: 70%;
+    border: 1px solid #000;
+}
+
+.sorting-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 4px 0;
+    background-color: rgb(150, 110, 110);
+}
+
+.sorting-form input,
+.sorting-form button {
+    width: 70px;
+    height: 100%;
+    border: none;
+}
+
+.sorting-form input {
+    padding: 0 8px;
+}
+
+.sorting-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: calc(100% - 50px);
+    padding-top: 10px;
+}
+
+.btn {
+    color: #fff;
+    background-color: #7ac517;
+    cursor: pointer;
+}
+
+.line {
+    width: 1px;
+    height: 0%;
+    background-color: #000;
+}
