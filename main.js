@@ -1,16 +1,13 @@
 const container = document.querySelector('.sorting-container');
-const startBtn = document.querySelector('.btn');
+const addBtn = document.querySelector('#add-btn');
+const sortBtn = document.querySelector('#sort-btn');
 
-startBtn.addEventListener('click', start);
+addBtn.addEventListener('click', createLines);
+sortBtn.addEventListener('click', sortLines);
 
-function start(e) {
+function createLines(e) {
     e.preventDefault();
 
-    createLines();
-    sortLines();
-}
-
-function createLines() {
     const input = document.querySelector('.lines-input');
     const arr = [];
     let height = 10;
@@ -21,6 +18,7 @@ function createLines() {
         height += height * 0.005;
         line.style.height = height + '%';
         arr.push(line);
+        console.log(height)
     }
 
     const shuffledArr = arr.sort((a, b) => 0.5 - Math.random());
@@ -30,8 +28,24 @@ function createLines() {
     return;
 }
 
-function sortLines() {
+function sortLines(e) {
+    e.preventDefault();
+
     const arr = Array.from(container.children);
-    console.log(arr)
-    
+
+    // Sort lines from shortest to tallest
+    arr.sort((a, b) => a.style.height > b.style.height ? 1 : -1);
+
+    rearrangeLines(arr);
+}
+
+function rearrangeLines(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < container.children.length; j++) {
+            if (arr[i].style.height === container.children[j].style.height) {
+                container.children[j].remove();
+                container.appendChild(arr[i]);
+            }
+        }
+    }
 }
