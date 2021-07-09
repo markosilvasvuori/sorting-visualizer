@@ -9,6 +9,12 @@
     height: 100vh;
 }
 
+.page-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .sorting-form {
     display: flex;
     align-items: center;
@@ -37,6 +43,7 @@
     width: 100%;
     height: calc(100% - 50px);
     padding-top: 10px;
+    background-color: #F9F9F9;
 }
 
 .btn {
@@ -47,12 +54,31 @@
 }
 
 .line {
-    width: 3px;
+    width: 4px;
     height: 0%;
     margin-right: 1px;
-    background-color: #000;
+    background-color: #39A2DB;
+    transition: background-color 0.2s ease-in;
 }
 
 .line:last-child {
     margin-right: 0;
+}
+
+.line-mask {
+    background-color: #A2DBFA;
+}
+
+.line-arranged {
+    background-color: #bca2fa;
+}
+
+.msg {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color: #D54C4C;
 }
