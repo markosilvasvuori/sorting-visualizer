@@ -14,7 +14,7 @@ resetBtn.addEventListener('click', reset)
 function createLines(e) {
     e.preventDefault();
 
-    handleError('add');
+    handleErrors('add');
 
     const arr = [];
     let height = 10;
@@ -43,7 +43,7 @@ function createLines(e) {
 function sortLines(e) {
     e.preventDefault();
 
-    handleError('sort');
+    handleErrors('sort');
 
     if (!sorted) {
         const arr = Array.from(container.children);
@@ -86,7 +86,7 @@ function reset(e) {
     msg.innerText = '';
 }
 
-function handleError(action) {
+function handleErrors(action) {
 
     errors = [];
 
