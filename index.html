@@ -9,16 +9,22 @@
 
     <body>
         <div class="wrapper">
-            <header class="page-header">
+            <header class="page-header shadow">
                 <form class="sorting-form">
-                    <input class="lines-input" type="text" name="lines" placeholder="10-400">
+                    <input class="lines-input" type="text" name="lines" placeholder="10-200">
                     <button id="add-btn" class="btn">Add</button>
                     <button id="sort-btn" class="btn">Sort</button>
                     <button id="reset-btn" class="btn">Reset</button>
                 </form>
-                <div class="msg"></div>
             </header>
-            <div class="sorting-container"></div>
+
+            <div class="msg"></div>
+            
+            <div class="sorting-container shadow"></div>
+
+            <footer class="page-footer shadow">
+                <div>&copy; Marko Silvasvuori 2021</div>
+            </footer>
         </div>
 
         <script src="main.js"></script>
