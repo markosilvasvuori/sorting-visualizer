@@ -30,8 +30,6 @@ function createLines(e) {
 
         const shuffledArr = arr.sort((a, b) => 0.5 - Math.random());
 
-        // shuffledArr.forEach(line => container.appendChild(line));
-
         for (let i = 0; i < shuffledArr.length; i++) {
             setTimeout(() => {
                 container.appendChild(shuffledArr[i]);
